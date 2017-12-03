@@ -1,0 +1,285 @@
+Conforme Nobrega e Gonçalves~\cite{nobrega_metodo_2013}, existem diferentes abordagens para se avaliar os diversos aspectos de um sistema computacional, sendo que algumas delas se utilizam de usuários reais, enquanto outras fazem uso de especialistas. Uma dessas abordagens são os métodos de avaliação advindos da área de \acrfull{IHC} que, conforme Barbosa e Silva~\cite{barbosa2010interacao} são divididos em três grupos:
+
+\begin{itemize}
+	\item Avaliação Através de Investigação: o avaliador pode utilizar, segundo os autores, questionários, entrevistas ou grupos focais para se coletar a impressão dos usuários. Neste tipo de avaliação é possível encontrar problemas que poderiam ocorrer quando o sistema está em funcionamento.
+	\item Avaliação Através de Inspeção: o avaliador busca se colocar no lugar do usuário enquanto analisa o sistema e não possui a participação de usuários reais. Avaliação heurística, avaliação do percurso cognitivo e método de inspeção semiótica são alguns dos exemplos utilizados dentro do grupo de inspeção.
+	\item Avaliação Através de Observação: o avaliador coleta dados com usuários através de testes de usabilidade, da aplicação do método de avaliação de comunicabilidade ou da prototipação em papel para identificar problemas que ocorreriam em situações reais de uso.
+\end{itemize}
+
+Esses métodos de avaliação podem ser formativos ou somativos. A avaliação formativa é realizada durante a fase de desenvolvimento e busca coletar dados que validem ou reorientem o que foi decidido na fase de planejamento. A avaliação somativa, por sua vez, é realizada depois que o sistema está finalizado e busca avaliar o quão distante o produto final ficou de metas específicas~\cite{barbosa2010interacao}.
+
+Na presente seção aplicamos avaliações correspondentes aos três grupos: entrevista, avaliação heurística e testes de usabilidade. A avaliação formativa (seção~\ref{sec:formativa}), foi realizada através de testes de usabilidade e a avaliação somativa (seção~\ref{sec:somativa}), foi realizada através de avaliação heurística, testes de usabilidade e entrevista.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Avaliação Formativa} \label{sec:formativa}
+
+A avaliação formativa teve como objetivo identificar problemas de \acrshort{IHC}. Para tanto, apresentamos a seguir os resultados dos testes de portabilidade (seção~\ref{ssec:testes_portabilidade}) e os testes informais (seção~\ref{ssec:informais}) realizados durante o período de desenvolvimento.
+
+\subsection{Testes de Portabilidade} \label{ssec:testes_portabilidade}
+
+Durante o desenvolvimento de “\textbf{As Aventuras de Ada e Turing}” foram realizados dois tipos de testes iniciais. Primeiramente, utilizamos o \textit{Corona Simulator} - simulador do Corona que permite a visualização da interface e interação com o jogo enquanto o mesmo está sendo desenvolvido - e então, dois dispositivos móveis:
+
+\begin{itemize}
+	\item Sony Xperia Z3 Compact
+	\begin{itemize}
+		\item Sistema operacional: Android 6.0.1 Marshmallow
+		\item Processador: 2.5 GHz Quad Core
+		\item \textit{Display}: 4.6 polegadas (1280x720)
+		\item Memória RAM: 2GB
+		\item Memória interna: 16 GB
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+	\item Samsung Galaxy J5
+	\begin{itemize}
+		\item Sistema operacional: Android 6.0.1 Marshmallow
+		\item Processador: 1.2 GHz Quad Core
+		\item \textit{Display}: 5 polegadas (1280x720)
+		\item Memória RAM: 1.5 GB
+		\item Memória interna: 16 GB
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+	\item HP 7 Plus 1302
+	\begin{itemize}
+		\item Sistema operacional: Android 4.2.2 Jelly Bean
+		\item Processador: 1.0GHzAllwinner A31 ARM Cortex A7 Quad Core
+		\item \textit{Display}: 7 polegadas (1024 x 600)
+		\item Memória RAM: 1 GB
+		\item Memória interna: 8 GB
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+	\item Motorola XOOM 2 3G MZ616
+	\begin{itemize}
+		\item Sistema operacional: Android 4.0.4 Ice Cream Sandwich
+		\item Processador: 1.2 GHz Cortex-A9 Dual-core 
+		\item \textit{Display}: 10.1 polegadas (1024 x 600)
+		\item Memória RAM: 1 GB
+		\item Memória interna: 16 GB
+\end{itemize}
+\end{itemize}
+
+Todos os dispositivos listados anteriormente foram utilizados durante o período de desenvolvimento, porém, para os testes pós-desenvolvimento (seção~\ref{ssec:publico-alvo}), foram utilizados somente os dispositivos  HP 7 Plus e Motorola XOOM 2. 
+
+Assim, nota-se que o jogo apresentou sucesso no teste de portabilidade, pois todos os dispositivos utilizados executaram-no sem comprometimento da interface e sem apresentar problemas que impossibilitassem o uso do jogo. 
+
+\subsection{Testes Informais} \label{ssec:informais}
+
+Ainda durante o período de desenvolvimento, testes informais envolvendo as próprias autoras e avaliadores voluntários foram realizados, visando verificar a interação do usuário com o jogo, possíveis problemas, erros ou sugestões de melhoria. Os avaliadores voluntários não se enquadravam no público-alvo do jogo, entretanto buscaram se colocar no lugar do usuário, conforme proposto por Nobrega e Gonçalves~\cite{nobrega_metodo_2013}. A partir dos resultados desta avaliação, algumas modificações foram realizadas, conforme apresentado a seguir.
+
+Inicialmente, foi utilizado um controle com o formato de um \textit{joystick} (\refFig{fig:joystick}) para indicar a direção para a qual o jogador desejava que o personagem se movesse. Todavia, os avaliadores voluntários apontaram que o uso dos controles não estavam intuitivos o suficiente. Ainda, sugeriram inserir a possibilidade de arrastar a seta que indica a direção para a área de instruções. Baseando-nos nesta sugestão, foram inseridos controles direcionais (\refFig{fig:direcionais}). Além disso, foi incluído um retângulo na área de instruções para que as setas de comando fossem arrastadas até ele, criando uma instrução a cada nova seta posicionada.
+
+\figura[H]{joystick}{Primeiro direcional utilizado}{fig:joystick}{width=0.2\textwidth}
+
+\figura[H]{direcionais}{Interface que representa a fase 1 exibindo os controles direcionais}{fig:direcionais}{width=0.6\textwidth}
+
+Os avaliadores voluntários também apontaram que a disposição dos botões de \textit{Play} - que indica a execução das instruções - e menu estavam atrapalhando a visualização da cena em algumas fases do jogo. Além disso, a roda, que indica o número de repetições para uma dada instrução, estaria posicionada de tal forma que, quando utilizada, fazia o posicionamento da mão do jogador cobrir a área de instruções, impossibilitando que o mesmo fizesse os movimentos de girar a roda e visualizar quantas vezes havia feito o movimento ao mesmo tempo. Para corrigir os problemas expostos, os elementos em questão foram reposicionados (\refFig{fig:menus_roda}).
+
+\figura[H]{menus_roda}{Botões \textit{Play}, Menu e a Roda de repetições}{fig:menus_roda}{width=0.6\textwidth}
+
+Mesmo que de modo informal, os testes com avaliadores voluntários foram essenciais para o desenvolvimento de “\textbf{As Aventuras de Ada e Turing}”, pois subsidiaram a alteração de importantes itens da interface do jogo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Avaliação Somativa} \label{sec:somativa}
+
+A avaliação somativa teve como objetivos identificar problemas de \acrshort{IHC} no jogo através da visão não só do público-alvo, mas de especialistas. Para tanto, especialistas em desenvolvimento de jogos foram consultados para avaliar “\textbf{As Aventuras de Ada e Turing}” utilizando o \textit{framework Octalysis} (seção~\ref{ssec:especialistas}); a jogabilidade foi avaliada pelas autoras através de um conjunto de heurísticas (seção~\ref{ssec:avaliacao_jogabilidade}); testes de usabilidade realizados diretamente com o público-alvo do jogo (seção~\ref{ssec:publico-alvo}); e questionário pós-teste feito com este público após utilizarem o jogo (seção~\ref{ssec:entrevista}).
+\subsection{Avaliação de Especialistas} \label{ssec:especialistas}
+
+Para suprir a necessidade de identificar elementos essenciais em um jogo e quais aspectos deveríamos refinar, convidamos um especialista em desenvolvimento de jogos digitais para dispositivos móveis com o intuito de analisar “\textbf{As Aventuras de Ada e Turing}” a partir dos pressupostos do \textit{framework Octalysis} (seção~\ref{ssec:octalysis}). Em paralelo com a avaliação do especialista, as autoras também fizeram a análise, visando realizar um comparativo entre os resultados obtidos.
+
+Quando equilibrados, os direcionadores do \textit{framework Octalysis} apontam as características de um jogo motivador e divertido que idealmente deveriam compor o jogo que estamos desenvolvendo (seção~\ref{ssec:octalysis}).  Portanto, para identificar se “\textbf{As Aventuras de Ada e Turing}” atende aos aspectos necessários em um jogo, utilizamos o \textit{framework Octalysis}.
+
+Inicialmente, as desenvolvedoras utilizaram o \textit{framework Octalysis} para realizar a avaliação do jogo “\textbf{As Aventuras de Ada e Turing}”. O resultado (\refFig{fig:octalysis_autoras}) mostra que a experiência de gamificação está balanceada, somando uma pontuação de 111 pontos na escala, de forma que nenhum dos direcionadores se destacou mais que os outros.
+
+\figura[H]{octalysis_autoras}{Avaliação do jogo “\textbf{As Aventuras de Ada e Turing}” realizada pelas autoras utilizando o \textit{framework Octalysis}}{fig:octalysis_autoras}{width=1.0\textwidth}
+
+Posteriormente, um especialista em desenvolvimento de jogos realizou a avaliação do jogo “\textbf{As Aventuras de Ada e Turing}” e qualificou os aspectos destacados pelo \textit{framework} que estão presentes no jogo. O resultado teve sua divulgação autorizada pelo \acrfull{TCLE} (Apêndice~\ref{ap:termo}), e mostra um octógono mais desbalanceado (~\refFig{fig:octalysis_especialista}).
+\figura[H]{octalysis_especialista}{Avaliação do jogo “\textbf{As Aventuras de Ada e Turing}” realizada pelo especialista em desenvolvimento de jogos utilizando o \textit{framework Octalysis}}{fig:octalysis_especialista}{width=1.0\textwidth}
+
+Apesar da pontuação do \textit{Octalysis} ser maior, 133, no geral, a avaliação do especialista mostra que o jogo está desequilibrado. Enquanto as autoras apontaram Significado, Realização e Evasão como direcionadores principais do jogo “\textbf{As Aventuras de Ada e Turing}”, o especialista indica Realização e Evasão em detrimento dos outros pontos.
+
+Apesar de, na conjectura inicial, as motivações extrínsecas e intrínsecas mostrarem-se equilibradas, o especialista manifesta uma tendência mais extrínseca. Segundo Chou~\cite{chou_octalysis_2015}, motivadores desse tipo tendem a ser efetivos quando oferecidos, porém, uma vez que o motivador extrínseco for removido, o estímulo do jogador irá diminuir. O ideal, nesse caso, é aumentar o número de motivadores intrínsecos, ou seja, o jogador deveria encontrar a recompensa na própria atividade de jogar.
+
+Considerando os direcionadores superiores e inferiores, também é preciso sofisticar os motivadores positivos, incentivando o jogador a engajar-se no jogo através da expressão de sua criatividade e proporcionando o domínio das habilidades, fazendo com que os usuários sintam-se bem e poderosos.
+
+Tanto as autoras quanto o especialista em desenvolvimento de jogos apontaram a falta de aspectos sociais no jogo, fato que fez com que uma das extremidades, no caso da avaliação do especialista, ultrapassasse a parte interna do octógono, apontando um aspecto extremamente fraco e que precisa ser trabalhado.
+
+Em geral, para que “\textbf{As Aventuras de Ada e Turing}” proporcione uma melhor experiência ao jogador, com uma estratégia gamificada, é necessário melhorar e repensar os elementos do jogo de forma a abordar os direcionadores com atividades mais positivas e produtivas, de maneira feliz e saudável.
+
+\subsection{Avaliação da Jogabilidade} \label{ssec:avaliacao_jogabilidade}
+
+Segundo Barcelos et al.~\cite{barcelos_alise_2011}, a jogabilidade é um conceito notável quando tratamos do desenvolvimento de jogos digitais. Esse termo inclui todos os aspectos de qualidade da interação do jogador com o jogo, e tais aspectos devem ser analisados no momento de criação, visto que são elementos que podem definir se o usuário terá interesse ou não em continuar jogando.
+
+Visando analisar “\textbf{As Aventuras de Ada e Turing}” para alcançar a melhor experiência para o jogador, foram investigadas formas de se avaliar a qualidade de jogos digitais. Uma das abordagens encontradas foi o conjunto de heurísticas apresentado por Barcelos et al.~\cite{barcelos_alise_2011} (Tabela~\ref{tab:heuristica}). Esse conjunto de heurísticas foi utilizado tanto por Barcelos et al.~\cite{barcelos_alise_2011}, para analisar a jogabilidade dos jogos \textit{Earth 2160} e \textit{Outlive}, quanto por Costa et al.~\cite{costa_construindo_2013}, para a avaliação da qualidade dos jogos criados por alguns estudantes do ensino técnico.
+
+\begin{table}[H]
+\centering
+\caption{Heurísticas de Jogabilidade}
+\label{tab:heuristica}
+\begin{tabular}{|p{15cm}|}
+\hline
+H1: Os controles devem ser claros, customizáveis e fisicamente confortáveis; suas respectivas ações de resposta devem ser imediatas. \\ \hline
+H2: O jogador deve poder customizar o áudio e o vídeo do jogo de acordo com suas necessidades.                                       \\ \hline
+H3: O jogador deve conseguir obter com facilidade informações sobre seu status e pontuação.                                          \\ \hline
+H4: O jogo deve possibilitar que o jogador desenvolva habilidades que serão necessárias futuramente.                                 \\ \hline
+H5: O jogador deve encontrar um tutorial claro de treinamento e familiarização com o jogo.                                           \\ \hline
+H6: Todas as representações visuais devem ser de fácil compreensão pelo jogador.                                                     \\ \hline
+H7: O jogador deve ser capaz de salvar o estado atual para retomar o jogo posteriormente.                                            \\ \hline
+H8: O layout e os menus devem ser intuitivos e organizados de forma que o jogador possa manter o seu foco na partida.                \\ \hline
+H9: A história deve ser rica e envolvente, criando um laço com o jogador e seu universo. \\ \hline
+H10: Os gráficos e a trilha sonora devem despertar o interesse do jogador. \\ \hline
+H11: Os atores digitais e o mundo do jogo devem parecer realistas e consistentes. \\ \hline
+H12: O objetivo principal do jogo deve ser apresentado ao jogador desde o início. \\ \hline
+H13: O jogo deve propor objetivos secundários e menores, paralelos ao objetivo principal. \\ \hline
+H14: O jogo deve possuir vários desafios e permitir diferentes estratégias. \\ \hline
+H15: O ritmo do jogo deve levar em consideração a fadiga e a manutenção dos níveis de atenção. \\ \hline
+H16: O desafio do jogo pode ser ajustado de acordo com a habilidade do jogador. \\ \hline
+H17: O jogador deve ser recompensado pelas suas conquistas de forma clara e imediata. \\ \hline
+H18: A inteligência artificial deve representar desafios e surpresas inesperadas para o jogador. \\ \hline
+H19: O jogo deve fornecer dicas, mas não muitas. \\ \hline
+\end{tabular}
+\end{table}
+
+No contexto da jogabilidade de “\textbf{As Aventuras de Ada e Turing}”, a avaliação utilizando o conjunto de heurísticas em questão foi utilizada para detectar falhas a serem corrigidas em trabalhos futuros. Os resultados da análise realizada constam na Tabela~\ref{tab:analise_heuristica}, onde são apontados o código da heurística em questão e a avaliação dos aspectos relacionados à sua implementação com sucesso ou não. A partir desta análise, observamos que as heurísticas H2, H6, H8, H10, H16 e H8 devem ser trabalhadas para que a jogabilidade seja ampliada. Em geral, os aspectos mais observados são a aparência do jogo e os sons/trilha sonora. 
+
+\begin{table}[H]
+\centering
+\caption{Análise do conjunto de heurísticas de “\textbf{As Aventuras de Ada e Turing}”}
+\label{tab:analise_heuristica}
+\begin{tabular}{|l|p{14cm}|}
+\hline
+H1  & As ações e respostas dos controles são imediatas. \\ \hline
+H2  & O protótipo do jogo não possui sons. \\ \hline
+H3  & O jogador tem acesso ao seu progresso na tela que representa o Mapa da cidade, porém essa informação só está disponível quando o jogador retorna à tela do mapa. \\ \hline
+H4  & Possibilita que o jogador desenvolva habilidades que serão utilizadas futuramente. \\ \hline
+H5  & Oferece tutoriais para auxiliar o jogador a conhecer os comandos necessários durante todo o jogo. \\ \hline
+H6  & As representações visuais do protótipo podem ser melhoradas, visto que os elementos utilizados não foram criados exclusivamente para o jogo. \\ \hline
+H7  & Cada fase completa é salva automaticamente e o jogador pode retomar o jogo posteriormente do ponto onde parou. \\ \hline
+H8  & A organização dos Menus, principalmente durante o jogo, podem ser melhorados. \\ \hline
+H9  & A história tenta criar um laço com o jogador e seu universo através do cotidiano apresentado, visto que se relaciona com o cotidiano do público-alvo. \\ \hline
+H10 & Os gráficos podem ser melhorados, saindo de uma visão 2D, por exemplo, e a trilha sonora deve ser incluída. \\ \hline
+H11 & Os atores são realistas e consistentes, porém um projeto de design próprio do jogo poderia melhorar esse aspecto. \\ \hline
+H12 & O objetivo principal do jogo é apresentado desde o início. \\ \hline
+H13 & Possui objetivos secundários em cada uma das fases.  \\ \hline
+H14 & As fases permitem que o jogador utilize diferentes estratégias para resolver os problemas propostos.  \\ \hline
+H15 & Possui fases curtas e a possibilidade de salvar o jogo e retomá-lo posteriormente de onde parou. \\ \hline
+H16 & O nível do jogo não foi ajustado e o protótipo foi desenvolvido para ser o nível fácil.   \\ \hline
+H17 & Cada conquista do jogador é recompensada com estrelas em cada fase e em chegar antes do irmão, de acordo com o desempenho no caminho do Mapa entre uma fase e outra. \\ \hline
+H18 & Não possui. \\ \hline
+H19 & São fornecidas dicas para ajudar o jogador através dos personagens e os \textit{feedbacks} ao final de cada fase. \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Avaliação do Público-Alvo} \label{ssec:publico-alvo}
+
+A etapa final da fase de testes de “\textbf{As Aventuras de Ada e Turing}” consistiu na aplicação do Roteiro de Testes (Apêndice~\ref{ap:roteiro}) junto ao público-alvo. Para tanto, três crianças, com idades de sete, oito e nove anos - aqui denominadas criança 1, criança 2 e criança 3, respectivamente - foram convidadas a completar as três fases do jogo enquanto era realizada a observação do uso. Os dados desta observação foram comparados com o fluxo ideal, apresentado no Roteiro de Testes.
+
+Os resultados divulgados foram autorizados pelos pais de duas das crianças e pela Coordenadora do \acrshort{PIJ} através do \acrshort{TCLE} (Apêndice~\ref{ap:termo}). O primeiro teste foi realizado no \acrshort{PIJ} com a criança 1, acompanhada pela monitora da turma e por uma das pesquisadoras. O segundo teste foi feito na \acrshort{UnB} com a criança 2, acompanhada pelas duas pesquisadoras, e a criança 3 realizou o teste na própria casa, acompanhada por uma das pesquisadoras.
+
+A partir do fluxo do jogo foram identificados oito cenários - base do Roteiro de Testes - convertidos em casos de teste que representam um conjunto de ações que o jogador deve realizar em um cenário ideal: 
+
+\begin{enumerate}
+\item realizar cadastro; 
+\item realizar o tutorial das setas; 
+\item realizar o tutorial da bicicleta; 
+\item ir até a escola; 
+\item organizar os materiais escolares; 
+\item ir até o restaurante; 
+\item ajudar o cozinheiro a preparar uma receita; 
+\item ir até a casa.
+\end{enumerate}
+
+Os \textit{tablets} foram entregues às crianças enquanto uma das pesquisadoras acompanhava o processo, tirando dúvidas e fazendo questionamentos para entender as dificuldades encontradas por elas. Nesse procedimento, observamos dificuldades em compreender o fluxo do jogo. As crianças 1, 2 e 3, por vezes, não conseguiram seguir o fluxo ideal, de forma que, em vez do cadastro, dirigiram-se até a interface de jogos salvos, clicando em vários lugares na tentativa de continuar o jogo. Os cadastros só foram efetuados após as crianças serem orientadas a voltarem ao Menu e criarem um Novo Jogo.
+
+Ainda em relação ao fluxo, a criança 1 perguntou durante todas as fases “E agora?” e em alguns momentos, “Onde eu clico?”, demonstrando que não conseguia identificar qual seria o próximo passo a ser seguido. Esse comportamento aponta um problema de comunicabilidade. Houve uma falha em comunicar com clareza a lógica do \textit{design}, ou seja, para que servem, como funcionam, etc~\cite{grupo_de_pesquisa_em_engenharia_semiotica_serg_avaliacao_2012}. As crianças 2 e 3, por outro lado, conseguiram não só assimilar cada uma das etapas do jogo, como compreender os passos que deveriam ser seguidos.
+
+A criança 1 ainda observou que havia dois personagens, Ada e Turing, e perguntou se independente de ser menino ou menina poderia escolher qualquer um dos dois, sendo incentivada a escolher o que mais gostasse. No entanto, a criança 2 foi a única que leu a mini biografia do personagem.
+
+Nenhuma das crianças demonstrou dificuldade em utilizar as setas indicativas de direção para apontar o sentido em que o personagem deveria se movimentar. Todavia, a falha na comunicação ocorreu em relação à metáfora de repetição (bicicleta). A criança 1 cumpriu o tutorial com sucesso, entretanto, não conseguiu aplicar a repetição em outras situações. Quando questionada se havia entendido que poderia girar a roda da bicicleta, ela respondeu que sim, mas que não queria. A criança 3 utilizou a bicicleta apenas nas últimas instruções de cada uma das etapas, não tendo percebido que o número de vezes que girava a roda da bicicleta refletia no número de passos dados pelo personagem na direção escolhida. Por outro lado, a criança 2 não teve dificuldades em entender a função da roda, utilizando não só enquanto podia, como também escolhendo as maiores distâncias para recorrer à ela.
+
+Outra observação feita acerca dos controles empregados no jogo diz respeito ao número de instruções que o jogador pode utilizar de uma única vez. As crianças 1 e 3 precisaram ser informadas da possibilidade de manipular mais de uma instrução, de modo que realizaram o primeiro tutorial aplicando no máximo duas instruções. A criança 2, por sua vez, conseguiu manusear mais instruções para a movimentação do personagem através apenas da leitura das orientações.
+
+Quanto aos tutoriais, a criança 1 ainda demonstrou descontentamento a respeito das falas dos personagens coadjuvantes. Ela apresentou desânimo em efetuar a leitura das falas, o que dificultou a compreensão dos comandos, e a partir da fase 2 (seção~\ref{sssec:fase_2}) perguntou se poderia passar os diálogos, o que dificultou a execução de algumas atividades. Outra reclamação presente foi a repetição das conversas. Quando foi necessário repetir alguma atividade, a criança 1 se mostrou bastante impaciente em ver as instruções repetidas. “De novo?”, “Posso ir para a próxima?”, “Vai logo.”, foram algumas das manifestações expressadas por ela.
+
+As crianças 2 e 3 não manifestaram aborrecimento com os diálogos. Ambas conseguiram ler e seguir a maioria das orientações, porém foi preciso orientá-las a clicar sobre o balão de mensagens para continuar a leitura das falas. Entretanto, a criança 3 ainda demonstrou dificuldade em clicar apenas no balão e por vezes apertava nos arredores.
+
+Na fase 2, onde o fluxo exigia que o jogador realizasse todo o percurso utilizando um único conjunto de instruções, todas as crianças demonstraram dificuldade para entender o objetivo, sendo que precisaram repetir a fase mais de uma vez para concluí-la. A criança 1 continuou tentando mover o personagem passo a passo, o que retornava o \textit{feedback} mostrando que ela não havia conseguido completar a fase e deveria utilizar mais a bicicleta para conseguir coletar todos os materias. Após algumas tentativas, foi necessário que explicássemos o que ela deveria fazer. 
+
+Também foi preciso explicar às crianças 2 e 3 o objetivo da fase, porém, enquanto a criança 2 precisou de apoio para não se perder sempre que mudava a direção do personagem (utilizando o dedo como guia na tela para marcar a posição) e fez o uso da bicicleta nas situações em que a movimentação era maior, a criança 3 não se perdeu na movimentação, mas fez todo o percurso sem o uso da bicicleta, chegando a um total de mais de 40 instruções. No entanto, ambas conseguiram concluir a fase sozinhas.
+
+A criança 1, por sua vez, foi instruída a verbalizar o que ela deveria fazer para concluir a fase 2. Perguntamos se sabia o que deveria fazer e ela conseguiu explicar corretamente, então pedimos para que mostrasse na tela o que deveria ser feito e, apontando com o dedo, ela conseguiu mostrar o caminho corretamente, porém não conseguia transformar todo o percurso em um único conjunto de instruções. Foi preciso acompanhá-la sempre perguntando o que ela deveria fazer para chegar a cada um dos materiais e ir construindo as instruções. Esse comportamento pode ser um indício de que ela consegue resolver o problema em outras situações (arrastando o dedo pela tela), mas não consegue formular um algoritmo que represente essas ações.
+
+Ao atingir a fase 3 (seção~\ref{sssec:fase_2}), a criança 1 pediu para parar de jogar, não completando os casos de teste 7 e 8. Ela demonstrou um desânimo crescente à medida que jogava, principalmente por ter que definir as instruções para que o personagem se movimentasse. Por vezes, quando queria movimentar o personagem, ela tentava arrastá-lo pelo caminho que deveria fazer.
+
+Na fase 3, a criança 2 já havia se apropriado de todos os controles e conseguiu concluir todo o objetivo com destreza, além de aplicar a repetição para diminuir a quantidade de instruções. Contudo, a criança 3, apesar da facilidade em concluir a fase, não utilizou a roda da bicicleta para reduzir o número de instruções, optando por manipular um maior número de setas.
+
+As crianças 2 e 3 concluíram, mesmo que por vezes se distanciando um pouco do fluxo desejado, todas as fases, porém apenas a criança 2 conseguiu otimizar o uso das instruções no mapa (com o auxílio da repetição representada pela roda) e receber a surpresa ao concluir o final do jogo. Além disso, a criança 2 ainda se manteve engajada não só em concluir as fases, como em entender e aplicar as instruções da melhor forma.
+
+Ao final, todas as crianças foram parabenizadas por auxiliarem nos testes e receberam um “certificado de testador de jogos digitais” (Apêndice~\ref{ap:certificado}) como forma de agradecimento. Além disso, elas foram informadas sobre o papel importante que desempenharam para a conclusão do desenvolvimento do jogo “\textbf{As Aventuras de Ada e Turing}”.
+
+A partir do desempenho das crianças, observamos que ainda existem muito pontos que podem ser melhorados, principalmente no que diz respeito à adequação à faixa etária, visto que a criança de sete anos demonstrou excessiva dificuldade para completar as fases. Outro ponto que precisa de atenção é a metáfora utilizada para representar a repetição, visto que apenas uma das crianças conseguiu, de fato, compreender a necessidade e utilizá-la corretamente.
+
+Quanto aos tutoriais, verificamos que eles não foram suficientes para que o fluxo do jogo corresse como esperado. A presença de um monitor/professor foi essencial a fim de que as crianças assimilassem os conceitos e concluíssem as fases. Ademais, o balanceamento do jogo apresenta algumas falhas, uma vez que nenhuma das crianças entendeu que para chegar antes do irmão/irmã, ela deveria usar corretamente a bicicleta enquanto se movimentava pelo Mapa da Cidade.
+
+\subsection{Entrevista Pós-Teste com o Público-Alvo} \label{ssec:entrevista}
+
+A entrevista pós-teste tem como objetivo avaliar se o jogo funciona bem para o jogador. O chamado “teste de jogo” (do inglês \textit{play testing}) consiste em jogar para que qualidades subjetivas sejam testadas, tais como: balanceamento, dificuldade e se o jogo é divertido~\cite{schultz2005game}.
+
+Para identificar tais qualidades, um conjunto de perguntas (Tabela~\ref{tab:entrevista}) foi criado e apresentado ao final dos testes com o jogo “\textit{As Aventuras de Ada e Turing}”.
+
+\begin{table}[H]
+\centering
+\caption{Questionário pós-teste}
+\label{tab:entrevista}
+\begin{tabular}{|l|p{14cm}|}
+\hline
+P1 & Você achou fácil ou difícil jogar “\textbf{As Aventuras de Ada e Turing}”?                 \\ \hline
+P2 & O que você achou da interface (imagens, botões) do jogo “\textbf{As Aventuras de Ada e Turing}”?               \\ \hline
+P3 & O que você achou da história do jogo “\textbf{As Aventuras de Ada e Turing}”?   \\ \hline
+P4 & Você encontrou alguma dificuldade ao jogar “\textbf{As Aventuras de Ada e Turing}”? \\ \hline
+P5 & Você achou o jogo divertido?  \\ \hline
+P6 & Você gostaria de jogar novamente “\textbf{As Aventuras de Ada e Turing}”?       \\ \hline
+P7 & Qual das fases do jogo “\textbf{As Aventuras de Ada e Turing}” mais chamou a sua atenção? Por que?                   \\ \hline
+\end{tabular}
+\end{table}
+
+As respostas das crianças foram gravadas e são apresentadas a seguir:
+
+\begin{itemize}
+	\item Criança 1
+	\begin{itemize}
+		\item[P1] Categorizou o jogo como um pouco difícil.
+		\item[P2] Gostou das imagens utilizadas.
+		\item[P3] Disse que a história era “legal”, mas que a irmã era “chata”.
+		\item[P4] Afirmou que o jogo foi muito difícil.
+		\item[P5] Categorizou o jogo como “um pouquinho” divertido.
+		\item[P6] Respondeu que “Não, obrigada”.
+		\item[P7] Gostou mais da fase da escola, porque o jogo foi “legal”.
+	\end{itemize}
+	\item Criança 2
+	\begin{itemize}
+		\item[P1] Categorizou o jogo como um pouco difícil, mas “legal”.
+		\item[P2] Achou as imagens muito bem feitas.
+		\item[P3] Disse que a história era divertida.
+		\item[P4] Respondeu que “Mais ou menos”.
+		\item[P5] Achou o jogo divertido.
+		\item[P6] Jogaria novamente.
+		\item[P7] Gostou mais da fase da escola, pois achou engraçado passar pelo professor e vê-lo repetir as mensagens.
+	\end{itemize}
+	\item Criança 3
+	\begin{itemize}
+		\item[P1] Categorizou o jogo como médio.
+		\item[P2] Achou a interface muito “bonitinha” e “legal”.
+		\item[P3] Disse que a história foi “legal” e que “gostou”.
+		\item[P4] Achou difícil percorrer os caminhos e identificar quais quadradinhos já havia andado.
+		\item[P5] Achou o jogo divertido.
+		\item[P6] Jogaria novamente.
+		\item[P7] Gostou mais da fase do restaurante, quando o cozinheiro prepara o macarrão: “Adorei o fogão”.
+	\end{itemize}
+\end{itemize}
+
+Em geral, as crianças mais velhas gostaram mais do jogo e tiveram um melhor desempenho, tanto com relação a entender o que era esperado delas, quanto à execução das instruções. Porém, a dificuldade do jogo precisa ser regulada, o que pode ser evidenciado pelo fato de que nenhuma das crianças conseguiu completar as fases com o desempenho esperado (três estrelas).

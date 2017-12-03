@@ -1,0 +1,221 @@
+\begin{description}
+    \item[Nome:] \textbf{As Aventuras de Ada e Turing}
+    \item[Descrição:] completar cada uma das fases do jogo de modo que o personagem principal ajude os outros personagens da cidade e chegue antes do seu irmão (ou da sua irmã) em casa, dessa forma ele/ela ganhará um presente da mãe.
+\end{description}
+
+\section{Propósito do Projeto} \label{sec:proposito}
+
+Este jogo tem como propósito desenvolver de forma transversal a outras disciplinas o pensamento computacional, tema central deste trabalho. Visto que o pensamento computacional não é uma disciplina no currículo da educação básica, mas suas habilidades e competências são defendidas como importantes por diversos autores, como visto no capítulo sobre pensamento computacional, buscamos, com este jogo, criar uma ferramenta que possa auxiliar o desenvolvimento dessas habilidades de forma lúdica e de fácil acesso para professores do Ensino Fundamental I, atingindo crianças a partir dos 6 anos.
+
+\section{Personagens} \label{sec:personagens}
+
+A Tabela~\ref{tab:personagens} apresenta nome, imagem e descrição dos personagens utilizados.
+
+\begin{table}[H]
+\centering
+\caption{Personagens}
+\label{tab:personagens}
+\begin{tabular}{|c|p{2cm}|p{8cm}|}
+\hline
+\textbf{Personagem} & \textbf{Imagem} & \textbf{Descrição}                                                           \\ \hline
+Ada                 & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{ada.png}} & Personagem principal ou coadjuvante (depende da escolha inicial do jogador). Está presente durante todo o jogo.  \\ \hline
+Turing              & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{turing.png}} & Personagem principal ou coadjuvante (depende da escolha inicial do jogador). Está presente durante todo o jogo.  \\ \hline
+Mãe                 & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{mom.png}} & Mãe do personagem principal. Está presente na primeira fase e na conclusão do jogo. \\ \hline
+Professor           & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{teacher.png}} & Professor da escolinha da cidade. Está presente na segunda fase.                    \\ \hline
+Cozinheiro          & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{cook.png}} & Cozinheiro do restaurante da cidade. Está presente na terceira fase.                \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Fluxo de Jogo} \label{sec:fluxo}
+
+O jogo segue o fluxo apresentado na \refFig{fig:fluxo}, de forma que na tela inicial o jogador terá a opção de iniciar um novo jogo ou continuar de onde parou (caso já tenha iniciado uma partida). Caso esteja iniciando um novo jogo, ele deverá informar o seu nome e escolher o avatar que será seu personagem (Ada ou Turing), do contrário, será direcionado para o mapa do jogo, continuando de onde parou.
+
+As fases seguintes são encadeadas, de maneira que após a criação de um novo jogo inicia-se a fase um (casa), seguida da fase dois (escola) e da fase três (restaurante). A conclusão do jogo será novamente, na casa, destino final do jogador. Além disso, ao final de cada uma das fases há uma mensagem de \textit{feedback}, para que o jogador saiba se concluiu a fase com sucesso. 
+
+\figura[H]{fluxo_de_jogo}{Fluxo de Jogo}{fig:fluxo}{width=1.0\textwidth}
+
+\subsection{Fase 1: Usar o Vocabulário} \label{ssec:fase_1}
+
+A primeira fase do jogo tem como objetivo desenvolver a habilidade de usar o vocabulário. Para tanto, o jogador passará por um treino interativo que apresentará os comandos do jogo e a dinâmica presente em todas as fases.
+
+O jogador iniciará o jogo em casa e sua mãe o guiará pelo treino. O jogo mostrará um pequeno tutorial ensinando-o a utilizar os controles para montar um quebra-cabeças de bicicleta, o qual terá quatro pedaços. As peças estarão distribuídas dentro da casa e o jogador deverá se movimentar para pegá-las uma a uma. Neste primeiro momento, o jogador não terá acesso à repetição e terá o limite de quatro execuções para pegar todas as peças.
+
+Após conseguir todas as peças da bicicleta, o jogador habilitará o modo repetição e ganhará um número pré-definido de repetições e uma execução para sair da casa e também será guiado pela mãe para entender o funcionamento da repetição.
+ 
+\begin{description}
+	\item Roteiro
+	\begin{description}
+        \item[Mãe:] Tenho um presente para você. Encontre todas as peças de quebra-cabeça que escondi pela casa para descobrir o que é.
+		\item[Treino Setas:]
+		\begin{description}
+		    \item[]
+			\item[Mãe:]\textbf{\textit{[Animação indicando a ação]}} Arraste a seta que indica a direção para onde você quer ir para o retângulo laranja para andar um quadradinho.
+			\item[Mãe:]\textbf{\textit{[Animação indicando a ação]}} Muito bem! Arraste mais uma seta para pegar a peça ao lado.
+			\item[Mãe:]\textbf{\textit{[Animação apontando para o botão de \textit[play]]}} Agora aperte no botão indicado para andar.
+			\item[Mãe:]Parabéns! Agora tente pegar as outras peças usando também outras setas.
+		\end{description}
+        \item[Mãe:]\textbf{\textit{[Quando o jogador encontra uma das peças]}} Muito bem! Você está perto de descobrir qual é o presente. Mas ainda faltam <número de peças> peças.
+		\item[Mãe:]\textbf{\textit{[Depois que o jogador pegou todas as peças]}} Parabéns! Você ganhou uma bicicleta.
+        \item \textbf{\textit{[Animação da bicicleta]}}
+		\item[Treino da Repetição:]
+		\begin{description}
+		    \item[]
+			\item[Mãe:] Vamos aprender a usar a sua nova bicicleta?
+            \item[Mãe:] \textbf{\textit{[Animação indicando a ação]}}Use o que você aprendeu antes. Arraste a seta que indica a direção para onde você quer ir para o retângulo laranja para andar um quadradinho.
+            \item[Mãe:] \textbf{\textit{[Animação indicando a ação]}} Agora gire a roda da bicicleta para aumentar o número de quadrados que você vai andar.
+            \item[Mãe:] \textbf{\textit{[Animação indicando a ação]}} Isso! Agora vamos fazer o mesmo para ir para cima.
+            \item[Mãe:] \textbf{\textit{[Animação indicando a ação]}} Aperte no botão indicado para andar.
+		\end{description}
+        \item[Mãe:] Agora, porque você não vai lá fora? Seu professor precisa de ajuda. Ele está na frende da sua escola. Vá até lá ajudá-lo.
+        \item[Mãe:] \textbf{\textit{[Animação indicando a ação]}} Para sair de casa, chegue ao quadradinho vermelho.
+        \item \textbf{\textit{[Animação de feedback]}}
+        \begin{description}
+            \item[]
+        	\item[Usou as repetições corretamente:] Parabéns! Continue usando sempre o menor número de setas com a ajuda da sua bicicleta.
+			\item[Não usou todas as repetições:] Legal, você chegou até <destino>. Mas por que você não tenta usar mais a sua bicicleta?
+			\item[Não usou repetições:] Você conseguiu chegar até <destino>. Mas cuidado para não esbarrar nos obstáculos andando tantos quadradinhos.
+			\item[Não chegou até a saída:] Você não conseguiu chegar <destino>. Tente outra vez, prestando atenção no caminho que você fez antes.
+        \end{description}
+        \item[Mãe:] Ah, quase me esqueci! Se você voltar logo para casa, vou te dar outro presente. Mas só volte depois de ajudar todo mundo da cidade que precisar da sua ajuda.
+        \item[Irmão/Irmã:] Humpf! Eu ouvi presente? Acho que eu deveria ganhá-lo. Ei, por que não fazemos uma aposta? Se eu chegar antes de você em casa, eu fico com o seu presente. Hahaha! Te vejo mais tarde com o meu presente!
+        \item[Mãe:] Esse seu irmão não tem jeito! É melhor você correr para alcançá-lo. Até mais tarde.
+        \item \textbf{\textit{[Transição para o mapa]}}
+    \end{description}
+\end{description}
+
+\subsection{Fase 2: Projetar Soluções para Problemas Utilizando Análise} \label{ssec:fase_2}
+
+A segunda fase do jogo enfatiza a habilidade de projetar soluções para problemas utilizando análise. O jogador estará na escola e terá todo o espaço para se movimentar, salvo os espaços com móveis. Movimentando-se pelo ambiente, o jogador deverá coletar os materiais escolares espalhados pelo chão e depositá-los no organizador. Para tanto, deverá analisar o melhor caminho para apanhar todos os materiais de uma só vez utilizando um número pré-definido de repetições e uma só execução. Porém, poderá reunir os materiais na ordem que achar mais adequada.
+
+\begin{description}
+	\item Roteiro
+    \begin{description}
+    	\item[Professor:] Olá! Que bom que sua mãe deixou que você viesse me ajudar. Os alunos fizeram uma bagunça na escola. Venha ver.
+        \item \textbf{\textit{[Transição para dentro da escola]}}
+        \item[Irmão:] 
+        \begin{description}
+            \item[]
+            \item[Se tiver usado as repetições e andar até o professor em 3 instruções:] Humpf, você chegou antes de mim dessa vez! Mas eu ainda vou chegar em casa antes de você.
+    		\item[Se usar mais de 3 instruções com a bicicleta (e colidir com alguma coisa):] Ha! Eu sabia que eu iria chegar antes de você. Você perdeu tempo usando setas demais (e batendo nas coisas), não foi?
+    		\item[Se não usar a bicicleta (e colidir com alguma coisa):] Haha, como você é lento! Você vai precisar usar mais a sua bicicleta se quiser chegar antes de mim.
+        \end{description}
+        \item[Professor:] Pegue os materiais que estão espalhados pelo chão e coloque-os no organizador.
+        \item[Professor:] \textbf{\textit{[Animação indicando a ação]}} Deixe-me mostrar.
+        \item[Professor:] \textit{\textbf{[Animação com a demonstração]}} Entendeu? Você deve fazer o mesmo para os outros materiais, mas você poderá apertar apenas uma vez no botão de andar. Não se esqueça de usar a sua bicicleta e de que você só poderá usá-la 6 vezes.
+        \item[Professor:] \textit{\textbf{[Animação da colisão]}} Ah, não! Tirei a cadeira do lugar. Deixe-me arrumá-la. Tome cuidado para não tirar as cadeiras marrons e as mesas laranjas do lugar. Não queremos bagunçar mais ainda a sala, certo? Boa sorte na sua tarefa!
+        \item \textbf{\textit{[Animação de feedback]}}
+        \begin{description}
+        	\item[Três estrelas]
+        	\begin{description}
+        	    \item[]
+        	    \item[\textit{Se pegar tudo com uma única execução e em 6 instruções:}] Parabéns, você pegou todos os materiais! Continue usando sempre o menor número de setas com a ajuda da sua bicicleta.
+        	\end{description}
+			\item[Duas estrelas]
+			\begin{description}
+			    \item[]
+				\item[]\textit{\textbf{Se usar mais de 6 instruções (e colidir):}} Muito bem, você pegou todos os materiais! Mas será que você não usou setas demais? Tente contar o número exato de quadradinhos necessários para pegar cada material e não se esqueça de usar a sua bicicleta para ganhar mais estrelas.
+				\item[]\textit{\textbf{Se usar 6 instruções, mas colidir:}} Muito bem, você pegou todos os materiais! Mas parece que você andou batendo nas coisas. Tente contar o número exato de quadradinhos necessários para pegar cada material e ganhar mais estrelas.
+			\end{description}
+			\item[Uma estrela]
+            \begin{description}
+                \item[]
+            	\item[] \textbf{\textit{Se não usar a bicicleta, mas chegar até o lugar:}} Você pegou os materiais, mas parece que você não usou a sua bicicleta. Tente usá-la da próxima vez para ganhar mais estrelas!
+                \item[] \textit{\textbf{Se não usar a bicicleta e colidir:}} Você pegou os materiais, mas parece que não usou a sua bicicleta e andou batendo nas carteiras. Use mais a sua bicicleta e tente não bater nas carteiras.
+            \end{description}
+            \item[Nenhuma estrela]
+            \begin{description}
+                \item[]
+                \item[] \textbf{\textit{Se não conseguir pegar todos os materiais:}} Parece que você não conseguiu recolher todos os materiais e colocá-los no organizador. Por que você não tenta outra vez? Não se esqueça de que você só pode apertar no botão de andar uma vez.
+            \end{description}
+        \end{description}
+        \item[Professor:] Obrigado por me ajudar! Agora eu poderei dar aula em uma sala organizada.
+        \item[Professor:] Eu ouvi dizer que o cozinheiro também estava precisando de ajuda. Por que você não vai até o restaurante ajudá-lo?
+        \item[] \textbf{\textit{[Transição para o mapa]}}
+    \end{description}
+\end{description}
+
+\begin{table}[H]
+\centering
+\caption{Materiais espalhados pela sala}
+\label{tab:materiais}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Material} & \textbf{Imagem}						                                             \\ \hline
+Palheta			  & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{palheta.png}}     \\ \hline
+Calculadora       & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{calculadora.png}} \\ \hline
+Livro             & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{livro.png}} 		 \\ \hline
+Anotações         & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{anotacoes.png}}   \\ \hline
+Pasta             & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{pasta.png}} 		 \\ \hline
+\end{tabular}
+\end{table}
+
+Na Tabela ~\ref{tab:materiais} estão demonstrados os ítem utilizados no jogo.
+
+\subsection{Fase 3: Projetar Soluções para Problemas Utilizando Análise e Criação de Algoritmo} \label{ssec:fase_3}
+
+Na terceira fase o jogo incentiva que o jogador projete soluções para o problema com a análise e criação de algoritmo. Para tanto, o cozinheiro do local o convidará a ajudá-lo a preparar macarrão, porém este macarrão é preparado em três etapas: 1) massa e 2) molho. Os ingredientes para todo o processo estarão espalhados pelo restaurante e o jogador deverá coletar na ordem designada pelo cozinheiro. Sendo:
+
+\begin{description}
+	\item[Massa]
+    \begin{enumerate}
+        \item[]
+    	\item \textit{bowl};
+        \item farinha;
+        \item ovos.
+    \end{enumerate}
+    \item[Molho]
+    \begin{enumerate}
+        \item[]
+    	\item panela;
+        \item óleo;
+        \item temperos;
+        \item tomate.
+    \end{enumerate}
+\end{description}
+
+Os ingredientes que estão espalhados pelo restaurante podem ser vistos na Tabela ~\ref{tab:ingredientes}.
+
+É importante observar que o jogador terá [x] repetições e duas execuções. Para cada etapa o jogador deverá percorrer a cozinha coletando os ingredientes e retornar para o cozinheiro. O objetivo dessa fase é que o jogador analise o problema e utilizar os recursos disponíveis da melhor forma possível seguindo a ordem designada.
+
+\begin{table}[H]
+\centering
+\caption{Ingredientes utilizados na receita}
+\label{tab:ingredientes}
+\begin{tabular}{|c|c|p{2cm}|}
+\hline
+\textbf{Módulo}          & \textbf{Ingredientes} & \textbf{Imagem} \\ \hline
+\multirow{3}{*}{Massa}   & \textit{Bowl}         & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{bowl.png}} \\ \cline{2-3} 
+                         & Farinha               & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{flour.png}} \\ \cline{2-3} 
+                         & Ovos                  & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{eggs.png}} \\ \hline
+\multirow{4}{*}{Molho}   & Panela                & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{pan.png}} \\ \cline{2-3} 
+                         & Óleo                  & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{oil.png}} \\ \cline{2-3} 
+                         & Temperos              & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{seasoning.png}} \\ \cline{2-3} 
+                         & Tomate                & \raisebox{-\totalheight}{\includegraphics[width=0.1\textwidth]{tomatoes.png}} \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{description}
+	\item Roteiro
+    \begin{description}
+    	\item[Irmão:]
+        \begin{description}
+        	\item[]
+            \item[\textit{Se usar as repetições e andar até o cozinheiro em 3 instruções:}] Humpf, você chegou antes de mim dessa vez! Mas eu ainda vou chegar em casa antes de você.
+            \item[\textit{Se usar mais de 3 instruções com a bicicleta (e colidir com alguma coisa):}] Ha! Eu sabia que eu iria chegar antes de você. Você perdeu tempo usando setas demais (e batendo nas coisas), não foi?
+			\item[\textit{Se não usar a bicicleta (e colidir com alguma coisa):}] Haha, como você é lento! Você vai precisar usar mais a sua bicicleta se quiser chegar antes de mim.
+        \end{description}
+        \item[Cozinheiro:] Ah, que bom que você veio me ajudar! Preciso fazer uma receita de macarrão, mas estou tendo dificuldades. Vamos lá?
+        \item[\textit{Transição para dentro da escola}]
+		\item[Cozinheiro:] Eu preciso que você pegue os ingredientes e utensílios necessário para fazer a receita. Os ingredientes estão na lista.
+		\item[Cozinheiro:] Você precisa pegar os ingredientes e utensílios na ordem em que aparecem na lista, senão o macarrão ficará ruim.
+		\item[Cozinheiro:] Depois que você pegar todos os ingredientes, entregue-os para mim. Não se esqueça de usar sua bicicleta. Deixarei que você a use x para que possamos terminar a receita o mais rápido possível.
+        \item[\textit{Depois que pegar os primeiros ingredientes}] \item[Cozinheiro:] \textbf{\textit{[Animação de lista atualizada]}} “Obrigado! Mas ainda preciso de mais ingredientes. Você pode pegá-los?
+        \item[\textit{[Animação de feedback]}]
+    \end{description}
+\end{description}
+
+\subsection{\textit{Feedback}: Realizar Testes e Depuração} \label{ssec:feedback}
+
+Além das habilidades delineadas em cada fase, projetamos retornar \textit{feedbacks} construtivos durante e ao final de cada fase para encorajar o jogador a avaliar a solução escolhida para resolver o problema (concluir a fase) e corrigí-la (se necessário) para alcançar um melhor resultado.
+
+

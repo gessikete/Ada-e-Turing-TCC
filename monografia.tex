@@ -1,0 +1,66 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classe do documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Opções:
+%  - Graduação: bacharelado|engenharia|licenciatura
+%  - Pós-graduação: [qualificacao], mestrado|doutorado, ppca|ppginf
+
+\documentclass[bacharelado]{UnB-CIC}%
+% \documentclass[qualificacao,mestrado,ppca]{UnB-CIC}%
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+\renewenvironment{quote}
+  {\small\list{}{\leftmargin=4cm}%
+   \item\relax}
+  {\endlist}
+
+\usepackage{url}%
+\usepackage{pdfpages}% incluir PDFs, usado no apêndice
+\usepackage{multirow}% merge em células da tabela
+\usepackage{subfig}%
+\usepackage{float}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Informações do Trabalho
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\orientador[a]{\prof[a] \dr[a] Letícia Lopes Leite}{CIC/UnB}%
+\coorientador{\prof \dr Raphael Moura Cardoso}{PPB/UnB}
+\coordenador{\prof \dr Rodrigo Bonifácio de Almeida}{CIC/UnB}%
+\diamesano{08}{dezembro}{2017}%
+
+\membrobanca{\prof[a] \dr[a] Maria de Fátima Ramos Brandão}{CIC/UnB}%
+\membrobanca{\prof[a] \dr[a] Letícia Lopes Leite}{CIC/UnB}%
+\membrobanca{\prof \dr Edison Ishikawa}{CIC/UnB}%
+
+\autor{Ana Carolina Lopes de}{Jesus}%
+\coautor{Géssica Neves Sodré da}{Silva}%
+
+\titulo{As Aventuras de Ada e Turing: Apoiando o Desenvolvimento do Pensamento Computacional Através de um Jogo}%
+
+\palavraschave{Pensamento computacional, ensino fundamental, jogos digitais}%
+\keywords{Computational thinking, elementary school, digital games}%
+
+\newcommand{\unbcic}{\texttt{UnB-CIC}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Texto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}%
+	
+    \capitulo{1_Introducao}{Introdução\label{cap:intro}}%
+    \capitulo{2_Tecnologias_na_Educacao}{Tecnologias na Educação\label{cap:tecnologia}}%
+	\capitulo{3_Pensamento_Computacional}{O que é o Pensamento Computacional?\label{cap:pensamento}}%
+    \capitulo{4_Jogos_Digitais}{Jogos Digitais\label{cap:jogos_digitais}}%
+    \capitulo{5_O_Jogo}{As Aventuras de Ada e Turing\label{cap:jogo}}%
+    \capitulo{6_Avaliacao_e_Testes}{Avaliação e Testes\label{cap:testes}}%
+    \capitulo{7_Conclusao}{Conclusão\label{cap:conclusao}}%
+    
+	\apendice{Apendice_Design}{Documento de Design\label{ap:design}}%
+	\apendice{Apendice_Termo}{Termo de Consentimento Livre e Esclarecido\label{ap:termo}}%
+    \apendice{Apendice_Roteiro_Teste}{Roteiro de Teste\label{ap:roteiro}}%
+    \apendice{Apendice_Certificado}{Certificado\label{ap:certificado}}%
+    
+\end{document}%
