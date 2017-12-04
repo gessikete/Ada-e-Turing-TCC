@@ -151,8 +151,7 @@
 \@ifundefined{XeTeXversion}{%
 	\PassOptionsToPackage{pdftex}{hyperref}
 
-	% não é mais necessário a partir de 2015 
-	% \RequirePackage{fixltx2e} %resolve defeitos do LaTeX
+	\RequirePackage{fixltx2e} %resolve defeitos do LaTeX
 	\RequirePackage{relsize} %utilizada no \@logo
 	\def\@textscale#1#2{\textscale{#1}{#2}}
 }{
@@ -958,7 +957,7 @@
 \newcommand{\tabelaBib}[5]{%
 	\begin{table}%
 		\centering%
-		\caption[#1]{#1\ifx#2\empty\else~(Fonte: ~\cite{#2})\fi\label{#3}}%
+		\caption[#1.]{#1\ifx#2\empty\else~(Fonte: ~\cite{#2})\fi.\label{#3}}%
 		\begin{tabular}{#4}%
 			#5
 		\end{tabular}%
